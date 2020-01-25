@@ -144,7 +144,7 @@ if __name__ == '__main__':
     import pandas as pd 
 
 
-    f  = pd.read_csv("f://iris_training.csv")
+    f  = pd.read_csv("./iris_training.csv")
     f  = np.array(f)
 
     ip = f[:,:4]
@@ -182,6 +182,10 @@ if __name__ == '__main__':
 
     #testing
     print("\n\nTesting\n\n")
-    for i in range(len(target)):
+    f  = pd.read_excel("./iris_test.xlsx")
+    f  = np.array(f)
+    ip = (f[:, :4])
+    op = (f[:,  4])
+    for i in range(len(op)):
         otpt = net.feed_forward(ip[i])[-1]
-        print("output of",i, "th input", np.argmax(otpt))
+        print("prediction:", np.argmax(otpt), "actual:", op[i])
