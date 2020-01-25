@@ -1,6 +1,6 @@
 ### neural-network
 Implementation of neural network from scratch using numpy
-##Installation
+## Installation
 clone this repository and in that directory execute:
  # Install python requirements
  python3 -m pip install -r requirements.txt
